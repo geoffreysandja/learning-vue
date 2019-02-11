@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vue:: Two-way Data Binding</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" v-model="inputText">
+            <p>inputText: {{inputText}}</p>
+            <br/>
+            <label><input type="radio" v-model="value" value="one">One</label>
+            <label><input type="radio" v-model="value" value="two">Two</label>
+            <label><input type="radio" v-model="value" value="three">Three</label>
+            <label><input type="radio" v-model="value" value="four">Four</label>
+            <p>The value is {{value}}</p>
+        </div>
+        <script src="https://unpkg.com/vue"></script>
+        <script>
+            new Vue({
+                el:'#app',
+                data:{
+                    inputText:'initial value',
+                    value: 'one'
+                },
+                created(){
+                  console.log('created');
+                }
+            });
+        </script>
+
+    </body>
+</html>

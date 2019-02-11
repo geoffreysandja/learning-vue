@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vue</title>
+        <body>
+            <div id="app">
+                <p v-if="path === '/'">You are on the home page</p>
+                <p v-else>You're on {{ path }}</p>
+            </div>
+            <script src="https://unpkg.com/vue"></script>
+            <script>
+            new Vue({
+                el:'#app',
+                data:{
+                   path: location.pathname
+                }
+            });
+            </script>
+        </body>
+    </head>
+</html>

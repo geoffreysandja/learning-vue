@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vue:: Seconds</title>
+    </head>
+    <body>
+        <div id="app">
+            <p>{{  seconds }} seconds have elapsed since opened the page.</p>
+        </div>
+        <script src="https://unpkg.com/vue"></script>
+        <script>
+            new Vue({
+                el:'#app',
+                data:{
+                    seconds:0
+                },
+                created(){
+                    setInterval(()=>{
+                        this.seconds++;
+                    },1000);
+                }
+            });
+        </script>
+
+    </body>
+</html>

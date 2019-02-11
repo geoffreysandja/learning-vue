@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vue</title>
+        <body>
+            <div id="app">
+                <p>Hello, {{greetee}}</p>
+            </div>
+            <script src="https://unpkg.com/vue"></script>
+            <script>
+            new Vue({
+                el:'#app',
+                data:{
+                   greetee: 'world'
+                }
+            });
+            </script>
+        </body>
+    </head>
+</html>
